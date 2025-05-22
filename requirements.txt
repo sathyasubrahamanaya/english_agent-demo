@@ -1,0 +1,11 @@
+fastapi[standard]
+pydantic-settings
+agno
+groq
+duckduckgo-search
+google-genai
+sqlmodel
+streamlit
+requests
+python-jose[cryptography]
+passlib[bcrypt]
