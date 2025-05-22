@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  fastapi:
+    build: .
+    working_dir: /app/app
+    command: fastapi run app/main.py --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+  streamlit:
+    build: .
+    working_dir: /app/app
+    command: streamlit run ui_app.py --server.port=8501 --server.enableCORS=false
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    depends_on:
+      - fastapi
+    env_file:
+      - .env
