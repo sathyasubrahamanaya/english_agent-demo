@@ -2,7 +2,9 @@ import streamlit as st
 import requests
 
 # Backend API endpoints
-API_BASE = "http://localhost:8000"
+local = "http://localhost:8000"
+remote = "https://english-agent-demo.onrender.com/"
+API_BASE = remote
 REGISTER_URL = f"{API_BASE}/register"
 LOGIN_URL = f"{API_BASE}/login"
 STREAM_URL = f"{API_BASE}/stream"
