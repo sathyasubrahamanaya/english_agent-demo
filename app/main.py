@@ -4,11 +4,9 @@ from pydantic import BaseModel
 from passlib.context import CryptContext
 from sqlmodel import select, Session
 from typing import Optional
-from database import get_session, User ,ChatHistory
+from database import get_session, User
 from fastapi.responses import StreamingResponse
-from fastapi.middleware.cors import CORSMiddleware
-import datetime as dt
-from fastapi.background import BackgroundTask
+
 
 from agent import agent,memory  # Import the agent from agent.py
 
