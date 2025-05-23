@@ -1,0 +1,10 @@
+python -m venv env
+
+pip install -r .\requirements.txt
+
+fastapi dev .\app\main.py
+
+.\env\Scripts\activate
+
+streamlit run .\app\ui_app.py
+
