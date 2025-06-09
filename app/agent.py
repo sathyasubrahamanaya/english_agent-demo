@@ -48,8 +48,8 @@ init_state = {
 }
 
 # Model initialization (replace with your API keys)
-GROQ_API_KEY = "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"
-GOOGLE_API_KEY = "AIzaSyBzob_1guHO-eK_4cWyxI_toBHw8XVM338"
+GROQ_API_KEY = ""
+GOOGLE_API_KEY = ""
 llma4_mavrick_id = "meta-llama/llama-4-maverick-17b-128e-instruct"
 model = Groq(id = llma4_mavrick_id,api_key=GROQ_API_KEY)
 gemini_model = Gemini(id="gemini-2.5-flash-preview-04-17",api_key=GOOGLE_API_KEY,generation_config=generate_content_config)
